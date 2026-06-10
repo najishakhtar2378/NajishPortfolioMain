@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+  <title>NAJISH AKHTAR - Full Stack Developer</title>
+  <link rel="stylesheet" href="styles-new.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!--Animated background particles-->
+  <div class="particles" id="particles"></div>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="logo" style="font-size: 20px;">NAJISH AKHTAR</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#educations">Educations</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#github-stats">GitHub Stats</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="theme-toggle" id="themeToggle">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>NAJISH AKHTAR</h1>
+      <p class="subtitle">Full Stack Developer & Problem Solver</p>
+      <p class="description">
+        Passionate Full Stack Developer specializing in backend engineering, scalable databases, and robust algorithms.
+        Currently building high-performance web applications.
+      </p>
+      <div class="cta-buttons">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h3 class="section-title" style="font-style: italic; color:rgb(29, 144, 246)">About My-Self</h3>
+      <div class="about-grid">
+        <div class="about-image">
+          <div class="profile-image">
+            <img src="WhatsApp Image 2023-03-29 at 9.42.28 PM.jpg" alt="Profile Photo" />
+          </div>
+        </div>
+        <div class="about-text">
+          <h3 style="color:honeydew; font-size:28px;">I'm NAJISH AKHTAR</h3>
+          <p>
+            I'm a passionate <strong>Full Stack Developer</strong> with expertise in building scalable web applications
+            from frontend to backend. With a strong foundation in <strong>Data Structures and Algorithms</strong>, I
+            combine technical excellence with creative problem-solving to deliver innovative solutions.
+          </p>
+          <p>
+            My work spans the entire development lifecycle - crafting responsive user interfaces with (React.js),
+            building robust backend systems (Node.js & Express), and managing databases (MongoDB). I've successfully
+            developed multiple full-stack projects including a comprehensive travel planning platform and trading
+            dashboards, deploying them to production environments.
+          </p>
+          <p>
+            As a dedicated problem-solver, I actively tackle complex coding challenges on platforms like LeetCode,
+            having solved 500+ DSA problems. I believe in writing clean, efficient, and maintainable code while
+            continuously learning new technologies and best practices to stay ahead in the evolving tech landscape.
+          </p>
+          <p>
+            <strong>Fun fact:</strong> "I solve DSA problems for fun... and sometimes dream in JavaScript!" 💻✨
+          </p>
+          <div class="about-links">
+            <a href="https://drive.google.com/file/d/1owU63TGHUDCG3Ykkhu2ykSIKFv79LrWt/view?usp=drivesdk"
+              target="_blank" class="btn btn-primary">
+              <i class="fas fa-download"></i> Download Resume
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat-card">
+          <div class="stat-number"
+            onclick="window.open('https://drive.google.com/file/d/1GgpQtaSaYh7CjB2rMONAItuRtpzPNrTe/view?usp=drivesdk')">
+            2
+          </div>
+          <div class="stat-label">Internship Certificate</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" onclick="window.location.href='https://leetcode.com/u/najishakhtarCoder123/'"
+            style="cursor: pointer">
+            500+
+          </div>
+          <div class="stat-label">DSA Problems Solved</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">7+</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">2+</div>
+          <div class="stat-label">Years Learning</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Education Section -->
+  <section id="educations" class="section" style="background: rgba(10, 14, 39, 0.4);">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+
+      <div
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+
+        <!-- B-Tech Card -->
+        <div class="card">
+          <h1>Bachelor of Technology
+            <i class="fas fa-graduation-cap edu-icon"></i>
+          </h1>
+          <p style="color: aliceblue; font-size: 0.9rem;">Computer Science and Engineering</p>
+          <h2 style="font-size: 13px;">Gurukula Kangdi(Deemed to be) University Haridwar-Uttrakhand</h2>
+          <p style="color: hsl(0, 20%, 98%); font-size: 12px;"> Oct-2022 – Nov 2026</p>
+          <p style="color: hsl(0, 1%, 86%); font-size: 10px;">CGPA: 8.5</p>
+          <p style="font-size: 0.85rem;">
+            Currently pursuing B-Tech with a strong foundation in Computer Science.
+            Actively learning Full Stack Web Development, Data Structures &
+            Algorithms, and backend technologies.
+          </p>
+          <a href="https://drive.google.com/file/d/YOUR_BTECH_MARKSHEET_ID/view" class="btn btn-primary"
+            style="display: inline-flex; margin-top: 0.8rem; gap: 0.5rem; width: auto; padding: 0.7rem 1.5rem; font-size: 0.9rem;"
+            target="_blank">
+            <i class="fas fa-download"></i> Download Marksheet
+          </a>
+        </div>
+
+        <!-- 12th Card -->
+        <div class="card">
+          <h1 style="font-size: 1rem;">Higher Secondary (12th) [PCM]
+            <i class="fas fa-school edu-icon"></i>
+          </h1>
+          <h2 style="font-size: 13px;">Shri Narayan Singh College Motihari</h2>
+          <p style="color: hsl(0, 40%, 98%); font-size: 12px;">Mar-2020 – Apr-2021</p>
+          <p style="color: hsl(0, 1%, 86%); font-size: 10px;">Percentage: 80.6%</p>
+          <p style="font-size: 0.85rem;">
+            Completed higher secondary education with a focus on Mathematics and
+            Computer Science, which built my logical thinking and problem-solving
+            skills.
+          </p>
+          <a href="https://drive.google.com/file/d/1PkXlhVvT3CGD6ykbTaJaDFCtPZsODF_P/view?usp=drivesdk"
+            class="btn btn-primary"
+            style="display: inline-flex; margin-top: 0.8rem; gap: 0.5rem; width: auto; padding: 0.7rem 1.5rem; font-size: 0.9rem;"
+            target="_blank">
+            <i class="fas fa-download"></i> Download Marksheet
+          </a>
+        </div>
+
+        <!-- 10th Card -->
+        <div class="card">
+          <h1 style="font-size: 1rem;">Secondary School (10th)
+            <i class="fas fa-school edu-icon"></i>
+          </h1>
+          <h2 style="font-size: 13px;">+2 Zila School Motihari</h2>
+          <p style="color: hsl(0, 50%, 99%); font-size: 12px;">Mar-2018 – Apr-2019</p>
+          <p style="color: hsl(0, 1%, 86%); font-size: 10px;">Percentage: 78.6%</p>
+          <p style="font-size: 0.85rem;">
+            Completed secondary school education with a focus on Mathematics and
+            Computer Science, which built my logical thinking and problem-solving
+            skills.
+          </p>
+          <a href="https://drive.google.com/file/d/1I-GtJZco8h8pPes8dq5dBCgmOnUX53Ho/view?usp=drive_link"
+            class="btn btn-primary"
+            style="display: inline-flex; margin-top: 0.8rem; gap: 0.5rem; width: auto; padding: 0.7rem 1.5rem; font-size: 0.9rem;"
+            target="_blank">
+            <i class="fas fa-download"></i> Download Marksheet
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  </div>
+  </section>
+  <script>
+    document.querySelector('a[href="#educations"]').addEventListener("click", function (e) {
+      e.preventDefault();
+      document.getElementById("educations").scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+  </script>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section" style="background:rgba(10, 14, 39, 0.4); padding:20px;">
+    <div class="container">
+      <h2 class="section-title">Experience & Internship</h2>
+      <div class="experience-grid">
+        <div class="card">
+          <h1>Software Developer Intern</h1>
+          <p style="color: aliceblue;"> Jan-2026 - Present</p>
+          <h2 style="font-size: 14px;">Tecxed (Onsite)</h2>
+          <p>
+            During my internship at Tecxed, I developed and maintained robust software solutions utilizing modern web
+            technologies and best practices. I contributed to building scalable, responsive applications by implementing
+            frontend interfaces and optimizing backend systems. Collaborated with senior developers on full-stack
+            projects, gaining hands-on experience with various frameworks and databases. Enhanced my problem-solving
+            skills and understanding of professional software architecture through real-world projects. This experience
+            solidified my foundation in professional development environments and agile methodologies.
+          </p>
+        </div>
+        <div class="card">
+          <h1>MERN Stack Developer Intern</h1>
+          <p style="color: aliceblue;">20-jan 2026 - 20-March 2026</p>
+          <h2 style="font-size: 14px;"> The Skybrisk(Remote)</h2>
+          <p>
+            During my internship at Skybrisk, I worked on two major projects: Book Management System and ERP Management
+            System. The Book Management System was designed to organize, store, and manage book records efficiently,
+            including issuing, returning, and availability tracking. The ERP Management System focused on integrating
+            multiple business operations such as user management, data handling, and workflow coordination into a single
+            platform. Through these projects, I gained hands-on experience in backend development, database design, and
+            real-world problem solving.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    document.getElementById("experience").addEventListener("click", function (e) {
+      e.preventDefault();
+      document.getElementById("experience").scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+  </script>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title">Skills & Technologies</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3><i class="fas fa-code"></i> Frontend Development</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-server"></i> Backend Development</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express.js</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">RESTful APIs</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-layer-group"></i> MERN Stack</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">Express.js</span>
+            <span class="skill-tag">React.js</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">JWT Authentication</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fas fa-database"></i> Java & Database Development</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">SQL Database</span>
+            <span class="skill-tag">Hibernate</span>
+            <span class="skill-tag">JDBC</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fas fa-brain"></i> Problem Solving</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Data Structures</span>
+            <span class="skill-tag">Algorithms</span>
+            <!-- <span class="skill-tag">GeeksforGeeks</span> -->
+            <span class="skill-tag">Logical Thinking</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">Postman</span>
+            <span class="skill-tag">Bootstrap</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hobbies Section -->
+  <section id="hobbies" class="section">
+    <div class="container">
+      <h2 class="section-title">My Hobbies & Interests</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+
+        <div class="hobby-card">
+          <div class="hobby-icon">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <h3>Reading</h3>
+          <p>
+            Passionate about reading technical blogs, articles, and documentation. I love exploring new concepts and
+            staying updated with the latest tech trends.
+          </p>
+        </div>
+
+        <div class="hobby-card">
+          <div class="hobby-icon">
+            <i class="fas fa-bicycle"></i>
+          </div>
+          <h3>Outdoor Activities</h3>
+          <p>
+            I enjoy cycling and hiking to maintain physical fitness. These activities help me relax and gain fresh
+            perspectives on coding challenges.
+          </p>
+        </div>
+
+        <div class="hobby-card">
+          <div class="hobby-icon">
+            <i class="fas fa-music"></i>
+          </div>
+          <h3>Music & Podcasts</h3>
+          <p>
+            I love listening to music and tech podcasts while working. They help me stay motivated and inspired during
+            long coding sessions.
+          </p>
+        </div>
+
+        <div class="hobby-card">
+          <div class="hobby-icon">
+            <i class="fas fa-cricket"></i>
+          </div>
+          <h3>Watching & Playing Cricket</h3>
+          <p>
+            Cricket is my passion! I enjoy both playing and watching cricket matches. This sport keeps me active,
+            teaches me teamwork, and provides a great break from coding.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="section">
+    <div class="container">
+      <h2 class="section-title">Achievements & Awards</h2>
+      <div class="achievements-grid">
+        <div class="achievement-card">
+          <div class="achievement-header">
+            <div class="achievement-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div class="achievement-info">
+              <h3>HiDev Hackathon</h3>
+              <p class="achievement-rank">Rank: Under 50th</p>
+            </div>
+          </div>
+          <p class="achievement-description">
+            Competed among 10,000+ students and secured a position under the top 50th. Developed an innovative solution
+            showcasing strong problem-solving and technical skills in a competitive environment.
+          </p>
+          <a href="https://drive.google.com/file/d/1ZjMhr1ZZSnn71iOKZj8DEeZGHqG9Ge5b/view?usp=drive_link"
+            target="_blank" class="btn btn-primary"
+            style="display: inline-flex; margin-top: 0.8rem; margin-bottom: 1.5rem; gap: 0.5rem; width: auto; padding: 0.7rem 1.5rem; font-size: 0.9rem;">
+            <i class="fas fa-certificate"></i> View Certificate
+          </a>
+          <div class="achievement-badge">Top 0.5% 🎯</div>
+        </div>
+
+        <div class="achievement-card">
+          <div class="achievement-header">
+            <div class="achievement-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div class="achievement-info">
+              <h3>TechSprint Hackathon(GKV Haridwar)</h3>
+              <p class="achievement-rank">Rank: 2</p>
+            </div>
+          </div>
+          <p class="achievement-description">
+            Achieved 2nd rank overall out of 1,000 participants. Demonstrated exceptional coding prowess and creative
+            problem-solving abilities during the competition.
+          </p>
+          <a href="https://drive.google.com/file/d/1QQeGZF72dVSHurLvM8_OLgj3YdHCjyvh/view?usp=drive_link"
+            target="_blank" class="btn btn-primary"
+            style="display: inline-flex; margin-top: 0.8rem; margin-bottom: 1.5rem; gap: 0.5rem; width: auto; padding: 0.7rem 1.5rem; font-size: 0.9rem;">
+            <i class="fas fa-certificate"></i> View Certificate
+          </a>
+          <div class="achievement-badge">Top 0.2% 🏆</div>
+        </div>
+        <!-- leetcode -->
+        <div class="achievement-card">
+          <div class="achievement-header">
+            <div class="achievement-icon">
+              <i class="fa-brands fa-leetcode"></i>
+            </div>
+            <div class="achievement-info">
+              <h3>LeetCode</h3>
+              <p class="achievement-rank">Rank:100000+</p>
+            </div>
+          </div>
+          <p class="achievement-description">
+            Achieved a significant milestone by solving 500+ problems on LeetCode, demonstrating strong problem-solving
+            skills and a deep understanding of data structures and algorithms. This accomplishment reflects my
+            dedication to continuous learning and improvement in competitive programming. Achieving two time 50 days
+            badge and 1 time 100 days badge on LeetCode, showcasing consistent commitment to daily problem-solving and
+            algorithmic challenges.
+          </p>
+          <a href="https://leetcode.com/u/najishakhtarCoder123/" target="_blank" class="btn btn-primary"
+            style="display: inline-flex; margin-top: 0.8rem; gap: 0.5rem; width: auto; padding: 0.7rem 1.5rem; font-size: 0.9rem;">
+            <i class="fa-brands fa-leetcode"></i> View Profile
+          </a>
+        </div>
+        <!-- leetcode end -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div id="projectsContainer" class="projects-grid">
+        <!-- Projects will be dynamically loaded from script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- GitHub Stats Section -->
+  <section id="github-stats" class="section">
+    <div class="container">
+      <h2 class="section-title">GitHub Statistics</h2>
+      <div class="github-stats-content">
+
+        <!-- Manual GitHub Stats Cards -->
+        <div class="github-overview-grid">
+          <div class="github-overview-card">
+            <div class="stat-icon">
+              <i class="fas fa-code-branch"></i>
+            </div>
+            <h3>Repositories</h3>
+            <p class="stat-number">15+</p>
+            <p class="stat-desc">Active projects on GitHub</p>
+          </div>
+
+          <div class="github-overview-card">
+            <div class="stat-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <h3>Stars</h3>
+            <p class="stat-number">50+</p>
+            <p class="stat-desc">Total stars across repos</p>
+          </div>
+
+          <div class="github-overview-card">
+            <div class="stat-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Followers</h3>
+            <p class="stat-number">100+</p>
+            <p class="stat-desc">Community followers</p>
+          </div>
+
+          <div class="github-overview-card">
+            <div class="stat-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3>Contributions</h3>
+            <p class="stat-number">500+</p>
+            <p class="stat-desc">Commits this year</p>
+          </div>
+        </div>
+
+        <!-- Top Languages -->
+        <div class="github-languages-section">
+          <h3 style="text-align: center; color: var(--accent-1); margin-bottom: 2rem;">
+            <i class="fas fa-chart-pie"></i> Top Languages
+          </h3>
+          <div class="github-languages-grid">
+            <div class="language-card">
+              <div class="language-name">JavaScript</div>
+              <div class="language-bar">
+                <div class="language-progress"
+                  style="width: 35%; background: linear-gradient(90deg, #f1e05a, #ffcc00);"></div>
+              </div>
+              <div class="language-percent">35%</div>
+            </div>
+
+            <div class="language-card">
+              <div class="language-name">React.js</div>
+              <div class="language-bar">
+                <div class="language-progress"
+                  style="width: 25%; background: linear-gradient(90deg, #61dafb, #00d4ff);"></div>
+              </div>
+              <div class="language-percent">25%</div>
+            </div>
+
+            <div class="language-card">
+              <div class="language-name">Node.js</div>
+              <div class="language-bar">
+                <div class="language-progress"
+                  style="width: 20%; background: linear-gradient(90deg, #68a063, #90c53f);"></div>
+              </div>
+              <div class="language-percent">20%</div>
+            </div>
+
+            <div class="language-card">
+              <div class="language-name">MongoDB</div>
+              <div class="language-bar">
+                <div class="language-progress"
+                  style="width: 15%; background: linear-gradient(90deg, #13aa52, #00ed64);"></div>
+              </div>
+              <div class="language-percent">15%</div>
+            </div>
+
+            <div class="language-card">
+              <div class="language-name">CSS/HTML</div>
+              <div class="language-bar">
+                <div class="language-progress" style="width: 5%; background: linear-gradient(90deg, #563d7c, #ff006e);">
+                </div>
+              </div>
+              <div class="language-percent">5%</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="github-cta">
+          <p>Want to see more details? Visit my full GitHub profile:</p>
+          <a href="https://github.com/najishakhtar2378" target="_blank" class="btn btn-primary">
+            <i class="fab fa-github"></i> View GitHub Profile
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Let's Connect</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <p>
+            I'm always open to discussing new opportunities, interesting
+            projects, or just having a chat about technology!
+          </p>
+
+          <div class="contact-methods">
+            <div class="contact-method">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email ( Most Recommended)</h4>
+                <a href="mailto:najishchamparni2003@gmail.com">najishchamparni2003@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-method">
+              <i class="fab fa-linkedin"></i>
+              <div>
+                <h4>LinkedIn</h4>
+                <a href="https://linkedin.com/in/najish-akhtar-698b30263" target="_blank">Connect with me</a>
+              </div>
+            </div>
+            <div class="contact-method">
+              <i class="fab fa-github"></i>
+              <div>
+                <h4>GitHub</h4>
+                <a href="https://github.com/najishakhtar2378" target="_blank">Follow my work</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group">
+              <input type="text" id="subject" name="subject" placeholder="Subject" required />
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+
+          <!-- Success Message -->
+          <p id="successMsg" style="color:green; display:none; margin-top:10px;">
+            Your message has been sent successfully!
+          </p>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer  -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-text">
+          <p>&copy; 2025 Najish Akhtar. All rights reserved.</p>
+          <p>
+            "I solve DSA problems for fun... and sometimes dream in
+            JavaScript."
+          </p>
+        </div>
+        <div class="footer-social">
+          <a href="https://github.com/najishakhtar2378" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/najish-akhtar-698b30263" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:najishchamparni2003@gmail.com"><i class="fas fa-envelope"></i></a>
+          <a href="https://instagram.com/najish3262" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/7079308040" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // EmailJS init
+    (function () {
+      emailjs.init({
+        publicKey: "4rW9aeRkvhuW-QdQA",
+      });
+    })();
+
+    // Form submit handle
+    document
+      .getElementById("contactForm")
+      .addEventListener("submit", function (e) {
+        e.preventDefault(); // page reload rokta hai
+
+        emailjs
+          .send("service_dd06nse", "template_790bs57", {
+            from_name: document.getElementById("name").value,
+            from_email: document.getElementById("email").value,
+            subject: document.getElementById("subject").value,
+            message: document.getElementById("message").value,
+          })
+          .then(function () {
+            alert("Message sent successfully ✅");
+            document.getElementById("contactForm").reset();
+          })
+          .catch(function (error) {
+            console.error("EmailJS Error:", error);
+            alert(error.text || "Failed to send message ❌");
+          });
+      });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
