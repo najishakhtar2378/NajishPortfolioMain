@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
   <title>NAJISH AKHTAR - Full Stack Developer</title>
-  <link rel="stylesheet" href="styles-new.css" />
+  <link rel="stylesheet" href="styles-new.css?v=1.7" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
@@ -22,13 +22,14 @@
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#educations">Educations</a></li>
-        <li><a href="#experience">Experience</a></li>
+        <li><a href="#journey">Journey</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#dsa-visualizer">DSA Sandbox</a></li>
         <li><a href="#achievements">Achievements</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#github-stats">GitHub Stats</a></li>
+        <li><a href="#blogs">Blogs</a></li>
+        <li><a href="#guestbook">Guestbook</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="theme-toggle" id="themeToggle">
@@ -71,22 +72,9 @@
           </div>
         </div>
         <div class="about-text">
-          <h3 style="color:honeydew; font-size:28px;">I'm NAJISH AKHTAR</h3>
+          <h3>I'm NAJISH AKHTAR</h3>
           <p>
-            I'm a passionate <strong>Full Stack Developer</strong> with expertise in building scalable web applications
-            from frontend to backend. With a strong foundation in <strong>Data Structures and Algorithms</strong>, I
-            combine technical excellence with creative problem-solving to deliver innovative solutions.
-          </p>
-          <p>
-            My work spans the entire development lifecycle - crafting responsive user interfaces with (React.js),
-            building robust backend systems (Node.js & Express), and managing databases (MongoDB). I've successfully
-            developed multiple full-stack projects including a comprehensive travel planning platform and trading
-            dashboards, deploying them to production environments.
-          </p>
-          <p>
-            As a dedicated problem-solver, I actively tackle complex coding challenges on platforms like LeetCode,
-            having solved 500+ DSA problems. I believe in writing clean, efficient, and maintainable code while
-            continuously learning new technologies and best practices to stay ahead in the evolving tech landscape.
+            I'm a passionate <strong>Full Stack Developer</strong> skilled in <strong>Java</strong>, <strong>Spring Boot</strong>, <strong>Spring Security</strong>, <strong>Hibernate</strong>, <strong>React.js</strong>, <strong>Node.js</strong>, <strong>Express.js</strong>, <strong>MongoDB</strong>, and <strong>MySQL</strong>. I enjoy building scalable web applications and solving complex problems through clean and efficient code. With <strong>500+ LeetCode</strong> problems solved, I continuously strengthen my problem-solving and software development skills.
           </p>
           <p>
             <strong>Fun fact:</strong> "I solve DSA problems for fun... and sometimes dream in JavaScript!" 💻✨
@@ -108,12 +96,46 @@
           </div>
           <div class="stat-label">Internship Certificate</div>
         </div>
-        <div class="stat-card">
-          <div class="stat-number" onclick="window.location.href='https://leetcode.com/u/najishakhtarCoder123/'"
-            style="cursor: pointer">
-            500+
+        <div class="stat-card leetcode-card"
+          onclick="document.getElementById('leetcodeModal').classList.add('active')"
+          style="cursor: pointer; display: flex; flex-direction: column; align-items: center;">
+          <div class="stat-number" id="lcTotal">585+</div>
+          <div class="stat-label" style="margin-bottom: 0.5rem;">DSA Problems Solved</div>
+          <div class="lc-progress-container"
+            style="margin-top: 10px; display: flex; flex-direction: column; gap: 5px; width: 100%; text-align: left;">
+            <div class="lc-bar-wrapper"
+              style="display: flex; align-items: center; justify-content: space-between; font-size: 11px;">
+              <span style="color: #00b8a3; font-weight: 600;">Easy</span>
+              <span id="lcEasy" style="color: var(--text-secondary);">Loading...</span>
+            </div>
+            <div class="lc-progress-bar"
+              style="height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden;">
+              <div id="lcEasyBar" style="width: 0%; height: 100%; background: #00b8a3; transition: width 1s ease;">
+              </div>
+            </div>
+
+            <div class="lc-bar-wrapper"
+              style="display: flex; align-items: center; justify-content: space-between; font-size: 11px; margin-top: 2px;">
+              <span style="color: #ffc01e; font-weight: 600;">Medium</span>
+              <span id="lcMedium" style="color: var(--text-secondary);">Loading...</span>
+            </div>
+            <div class="lc-progress-bar"
+              style="height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden;">
+              <div id="lcMediumBar" style="width: 0%; height: 100%; background: #ffc01e; transition: width 1s ease;">
+              </div>
+            </div>
+
+            <div class="lc-bar-wrapper"
+              style="display: flex; align-items: center; justify-content: space-between; font-size: 11px; margin-top: 2px;">
+              <span style="color: #ef4743; font-weight: 600;">Hard</span>
+              <span id="lcHard" style="color: var(--text-secondary);">Loading...</span>
+            </div>
+            <div class="lc-progress-bar"
+              style="height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden;">
+              <div id="lcHardBar" style="width: 0%; height: 100%; background: #ef4743; transition: width 1s ease;">
+              </div>
+            </div>
           </div>
-          <div class="stat-label">DSA Problems Solved</div>
         </div>
         <div class="stat-card">
           <div class="stat-number">7+</div>
@@ -126,134 +148,509 @@
       </div>
     </div>
   </section>
-  <!-- Education Section -->
-  <section id="educations" class="section" style="background: rgba(10, 14, 39, 0.4);">
+  <!-- Journey Section (Unified Timeline) -->
+  <section id="journey" class="section">
     <div class="container">
-      <h2 class="section-title">Education</h2>
+      <h2 class="section-title">My Journey</h2>
 
-      <div
-        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+      <div class="timeline-container">
+        <!-- Center line -->
+        <div class="timeline-line"></div>
 
-        <!-- B-Tech Card -->
-        <div class="card">
-          <h1>Bachelor of Technology
-            <i class="fas fa-graduation-cap edu-icon"></i>
-          </h1>
-          <p style="color: aliceblue; font-size: 0.9rem;">Computer Science and Engineering</p>
-          <h2 style="font-size: 13px;">Gurukula Kangdi(Deemed to be) University Haridwar-Uttrakhand</h2>
-          <p style="color: hsl(0, 20%, 98%); font-size: 12px;"> Oct-2022 – Nov 2026</p>
-          <p style="color: hsl(0, 1%, 86%); font-size: 10px;">CGPA: 8.5</p>
-          <p style="font-size: 0.85rem;">
-            Currently pursuing B-Tech with a strong foundation in Computer Science.
-            Actively learning Full Stack Web Development, Data Structures &
-            Algorithms, and backend technologies.
-          </p>
-          <a href="https://drive.google.com/file/d/YOUR_BTECH_MARKSHEET_ID/view" class="btn btn-primary"
-            style="display: inline-flex; margin-top: 0.8rem; gap: 0.5rem; width: auto; padding: 0.7rem 1.5rem; font-size: 0.9rem;"
-            target="_blank">
-            <i class="fas fa-download"></i> Download Marksheet
-          </a>
+        <!-- 1. Tecxed Internship -->
+        <div class="timeline-item left reveal">
+          <div class="timeline-dot"><i class="fas fa-briefcase"></i></div>
+          <div class="card timeline-card">
+            <span class="timeline-badge work">Work Experience</span>
+            <span class="timeline-date">Jan 2026 - Present</span>
+            <h1>Software Developer Intern</h1>
+            <h2 style="font-size: 14px; margin-top: 0.2rem;">Tecxed (Onsite) — Dehradun</h2>
+            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.3rem;"><i class="fas fa-globe-asia" style="margin-right: 4px;"></i>HQ: Singapore | Also in Malaysia</p>
+            <p style="font-size: 0.9rem; margin-top: 0.8rem;">
+              Working on <strong>ProjAuto (Project Automation)</strong> — an enterprise-level construction management system. Contributing to frontend & backend development, REST API integration, testing, and DevOps workflows.
+            </p>
+            <button class="btn btn-primary view-more-btn" id="tecxedViewMore"
+              style="margin-top: 1rem; padding: 0.6rem 1.4rem; font-size: 0.85rem; border-radius: 30px; gap: 0.5rem;"
+              onclick="document.getElementById('tecxedModal').classList.add('active')">
+              <i class="fas fa-eye"></i> View More
+            </button>
+          </div>
         </div>
 
-        <!-- 12th Card -->
-        <div class="card">
-          <h1 style="font-size: 1rem;">Higher Secondary (12th) [PCM]
-            <i class="fas fa-school edu-icon"></i>
-          </h1>
-          <h2 style="font-size: 13px;">Shri Narayan Singh College Motihari</h2>
-          <p style="color: hsl(0, 40%, 98%); font-size: 12px;">Mar-2020 – Apr-2021</p>
-          <p style="color: hsl(0, 1%, 86%); font-size: 10px;">Percentage: 80.6%</p>
-          <p style="font-size: 0.85rem;">
-            Completed higher secondary education with a focus on Mathematics and
-            Computer Science, which built my logical thinking and problem-solving
-            skills.
-          </p>
-          <a href="https://drive.google.com/file/d/1PkXlhVvT3CGD6ykbTaJaDFCtPZsODF_P/view?usp=drivesdk"
-            class="btn btn-primary"
-            style="display: inline-flex; margin-top: 0.8rem; gap: 0.5rem; width: auto; padding: 0.7rem 1.5rem; font-size: 0.9rem;"
-            target="_blank">
-            <i class="fas fa-download"></i> Download Marksheet
-          </a>
+        <!-- Tecxed Internship Detail Modal -->
+        <div class="internship-modal-overlay" id="tecxedModal">
+          <div class="internship-modal">
+            <button class="internship-modal-close" onclick="document.getElementById('tecxedModal').classList.remove('active')">
+              <i class="fas fa-times"></i>
+            </button>
+
+            <!-- Modal Header -->
+            <div class="internship-modal-header">
+              <div class="internship-modal-badge">
+                <i class="fas fa-building"></i> Tecxed — Onsite, Dehradun
+              </div>
+              <h1>Software Developer Intern</h1>
+              <p class="internship-modal-subtitle">Jan 2026 — Present</p>
+              <div class="internship-locations">
+                <span class="internship-location-tag"><i class="fas fa-map-marker-alt"></i> Dehradun, India</span>
+                <span class="internship-location-tag hq"><i class="fas fa-crown"></i> HQ: Singapore</span>
+                <span class="internship-location-tag"><i class="fas fa-globe-asia"></i> Malaysia</span>
+              </div>
+            </div>
+
+            <!-- Project Overview -->
+            <div class="internship-modal-section">
+              <h2><i class="fas fa-rocket"></i> Project — ProjAuto (Project Automation)</h2>
+              <p>
+                An enterprise-level <strong>construction management system</strong> inspired by SAP-based workflows. The application is designed to streamline and manage end-to-end construction business operations for organizations — covering project planning, execution, resource management, procurement, and asset tracking.
+              </p>
+            </div>
+
+            <!-- Modules -->
+            <div class="internship-modal-section">
+              <h2><i class="fas fa-cubes"></i> Modules Worked On</h2>
+              <div class="internship-modules-grid">
+                <div class="internship-module-chip"><i class="fas fa-th-large"></i> Portfolio Management</div>
+                <div class="internship-module-chip"><i class="fas fa-tasks"></i> Program Management</div>
+                <div class="internship-module-chip"><i class="fas fa-project-diagram"></i> Project Management</div>
+                <div class="internship-module-chip"><i class="fas fa-sitemap"></i> Work Breakdown Structure</div>
+                <div class="internship-module-chip"><i class="fas fa-stream"></i> Sub-WBS</div>
+                <div class="internship-module-chip"><i class="fas fa-clipboard-list"></i> Activity Management</div>
+                <div class="internship-module-chip"><i class="fas fa-play-circle"></i> Project Execution</div>
+                <div class="internship-module-chip"><i class="fas fa-warehouse"></i> Asset Management</div>
+                <div class="internship-module-chip"><i class="fas fa-boxes"></i> Inventory Management</div>
+                <div class="internship-module-chip"><i class="fas fa-shopping-cart"></i> Procurement</div>
+              </div>
+            </div>
+
+            <!-- Technologies -->
+            <div class="internship-modal-section">
+              <h2><i class="fas fa-code"></i> Technologies Used</h2>
+              <div class="internship-tech-grid">
+                <div class="internship-tech-group">
+                  <h3>Frontend</h3>
+                  <div class="internship-tech-tags">
+                    <span class="internship-tech-tag frontend">React.js</span>
+                  </div>
+                </div>
+                <div class="internship-tech-group">
+                  <h3>Backend</h3>
+                  <div class="internship-tech-tags">
+                    <span class="internship-tech-tag backend">Java</span>
+                    <span class="internship-tech-tag backend">Spring Boot</span>
+                    <span class="internship-tech-tag backend">Microservices</span>
+                    <span class="internship-tech-tag backend">REST APIs</span>
+                  </div>
+                </div>
+                <div class="internship-tech-group">
+                  <h3>Database</h3>
+                  <div class="internship-tech-tags">
+                    <span class="internship-tech-tag database">SQL</span>
+                  </div>
+                </div>
+                <div class="internship-tech-group">
+                  <h3>Security</h3>
+                  <div class="internship-tech-tags">
+                    <span class="internship-tech-tag security">RBAC</span>
+                  </div>
+                </div>
+                <div class="internship-tech-group">
+                  <h3>DevOps & Deployment</h3>
+                  <div class="internship-tech-tags">
+                    <span class="internship-tech-tag devops">Git</span>
+                    <span class="internship-tech-tag devops">GitHub</span>
+                    <span class="internship-tech-tag devops">Docker</span>
+                    <span class="internship-tech-tag devops">CI/CD</span>
+                    <span class="internship-tech-tag devops">AWS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contributions -->
+            <div class="internship-modal-section">
+              <h2><i class="fas fa-star"></i> My Contributions</h2>
+              <ul class="internship-contributions">
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span>Tested and validated multiple business modules, including WBS, Activity, Resource Planning, Material Planning, Asset Planning, Overhead Planning, and Subcontract Service Planning.</span>
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span>Identified, documented, and tracked functional, validation, UI, and workflow issues.</span>
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span>Verified fixes and performed regression testing after implementation.</span>
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span>Contributed to frontend and backend development by implementing business logic, integrating REST APIs, and resolving module-specific issues.</span>
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span>Worked with role-based access control (RBAC) to ensure users could access only the features permitted for their roles.</span>
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span>Collaborated with the development team using Git and GitHub, following branch-based workflows.</span>
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span>Gained practical exposure to Docker, CI/CD pipelines, microservices, and cloud deployment on AWS.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Summary -->
+            <div class="internship-modal-section internship-summary-box">
+              <p>
+                <i class="fas fa-graduation-cap"></i>
+                This internship has provided hands-on experience in building and maintaining a large-scale enterprise application while working with modern full-stack development and DevOps practices.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <!-- 10th Card -->
-        <div class="card">
-          <h1 style="font-size: 1rem;">Secondary School (10th)
-            <i class="fas fa-school edu-icon"></i>
-          </h1>
-          <h2 style="font-size: 13px;">+2 Zila School Motihari</h2>
-          <p style="color: hsl(0, 50%, 99%); font-size: 12px;">Mar-2018 – Apr-2019</p>
-          <p style="color: hsl(0, 1%, 86%); font-size: 10px;">Percentage: 78.6%</p>
-          <p style="font-size: 0.85rem;">
-            Completed secondary school education with a focus on Mathematics and
-            Computer Science, which built my logical thinking and problem-solving
-            skills.
-          </p>
-          <a href="https://drive.google.com/file/d/1I-GtJZco8h8pPes8dq5dBCgmOnUX53Ho/view?usp=drive_link"
-            class="btn btn-primary"
-            style="display: inline-flex; margin-top: 0.8rem; gap: 0.5rem; width: auto; padding: 0.7rem 1.5rem; font-size: 0.9rem;"
-            target="_blank">
-            <i class="fas fa-download"></i> Download Marksheet
-          </a>
+        <!-- 2. Skybrisk Internship -->
+        <div class="timeline-item right reveal">
+          <div class="timeline-dot"><i class="fas fa-briefcase"></i></div>
+          <div class="card timeline-card">
+            <span class="timeline-badge work">Work Experience</span>
+            <span class="timeline-date">Jan 2026 - Mar 2026</span>
+            <h1>MERN Stack Developer Intern</h1>
+            <h2 style="font-size: 14px; margin-top: 0.2rem;">The Skybrisk (Remote)</h2>
+            <p style="font-size: 0.9rem; margin-top: 0.8rem;">
+              Worked on two major projects: Book Management System and ERP Management System. Focused on integrating business operations, user management, and backend database workflows.
+            </p>
+            <button class="btn btn-primary view-more-btn" id="skybriskViewMore"
+              style="margin-top: 1rem; padding: 0.6rem 1.4rem; font-size: 0.85rem; border-radius: 30px; gap: 0.5rem;"
+              onclick="document.getElementById('skybriskModal').classList.add('active')">
+              <i class="fas fa-eye"></i> View More
+            </button>
+          </div>
+        </div>
+
+        <!-- Skybrisk Internship Detail Modal -->
+        <div class="internship-modal-overlay" id="skybriskModal">
+          <div class="internship-modal">
+            <button class="internship-modal-close" onclick="document.getElementById('skybriskModal').classList.remove('active')">
+              <i class="fas fa-times"></i>
+            </button>
+
+            <!-- Modal Header -->
+            <div class="internship-modal-header">
+              <div class="internship-modal-badge">
+                <i class="fas fa-building"></i> The Skybrisk — Remote
+              </div>
+              <h1>MERN Stack Developer Intern</h1>
+              <p class="internship-modal-subtitle">Jan 2026 — Mar 2026</p>
+            </div>
+
+            <!-- Project Overview -->
+            <div class="internship-modal-section">
+              <h2><i class="fas fa-rocket"></i> Project — ERP Management System</h2>
+              <p>
+                Developed a full-stack <strong>ERP (Enterprise Resource Planning) Management System</strong> using the <strong>MERN Stack</strong> to automate and manage core business operations including customer management, product management, sales, procurement, and order processing.
+              </p>
+            </div>
+
+            <!-- Key Features -->
+            <div class="internship-modal-section">
+              <h2><i class="fas fa-star"></i> Key Features</h2>
+              <ul class="internship-contributions">
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span>Implemented complete <strong>CRUD (Create, Read, Update, Delete)</strong> operations for various ERP modules.</span>
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span>Designed and implemented <strong>Role-Based Access Control (RBAC)</strong> to ensure users can access only the features and data permitted for their roles.</span>
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span>Built a complete business workflow covering customer management, product management, sales, procurement, and order processing.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Business Workflow -->
+            <div class="internship-modal-section">
+              <h2><i class="fas fa-project-diagram"></i> Business Workflow</h2>
+              <div class="internship-workflow">
+                <div class="workflow-step">
+                  <div class="workflow-step-number">1</div>
+                  <span>Admin manages the entire ERP system and has access to all modules.</span>
+                </div>
+                <div class="workflow-step">
+                  <div class="workflow-step-number">2</div>
+                  <span>Admin can create and manage customers, products, vendors, and users.</span>
+                </div>
+                <div class="workflow-step">
+                  <div class="workflow-step-number">3</div>
+                  <span>Customers place orders for products.</span>
+                </div>
+                <div class="workflow-step">
+                  <div class="workflow-step-number">4</div>
+                  <span>The Sales team creates and manages customer orders.</span>
+                </div>
+                <div class="workflow-step">
+                  <div class="workflow-step-number">5</div>
+                  <span>Payments are processed and products are delivered to customers.</span>
+                </div>
+                <div class="workflow-step">
+                  <div class="workflow-step-number">6</div>
+                  <span>For inventory replenishment, the Admin contacts vendors and raises <strong>Purchase Orders (POs)</strong>.</span>
+                </div>
+                <div class="workflow-step">
+                  <div class="workflow-step-number">7</div>
+                  <span>Vendors fulfill the Purchase Orders by supplying products to the company.</span>
+                </div>
+                <div class="workflow-step">
+                  <div class="workflow-step-number">8</div>
+                  <span>The system manages the complete procurement and sales lifecycle from customer order to product delivery.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Technologies -->
+            <div class="internship-modal-section">
+              <h2><i class="fas fa-code"></i> Technologies Used</h2>
+              <div class="internship-tech-grid">
+                <div class="internship-tech-group">
+                  <h3>Frontend</h3>
+                  <div class="internship-tech-tags">
+                    <span class="internship-tech-tag frontend">React.js</span>
+                  </div>
+                </div>
+                <div class="internship-tech-group">
+                  <h3>Backend</h3>
+                  <div class="internship-tech-tags">
+                    <span class="internship-tech-tag backend">Node.js</span>
+                    <span class="internship-tech-tag backend">Express.js</span>
+                  </div>
+                </div>
+                <div class="internship-tech-group">
+                  <h3>Database</h3>
+                  <div class="internship-tech-tags">
+                    <span class="internship-tech-tag database">MongoDB</span>
+                  </div>
+                </div>
+                <div class="internship-tech-group">
+                  <h3>Auth & Security</h3>
+                  <div class="internship-tech-tags">
+                    <span class="internship-tech-tag security">JWT Authentication</span>
+                    <span class="internship-tech-tag security">RBAC</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Summary -->
+            <div class="internship-modal-section internship-summary-box">
+              <p>
+                <i class="fas fa-graduation-cap"></i>
+                This project provided hands-on experience in building a real-world ERP system with complete business workflows, role-based security, and full-stack MERN development.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- LeetCode Interactive Dashboard Modal -->
+        <div class="internship-modal-overlay" id="leetcodeModal">
+          <div class="internship-modal leetcode-modal-content">
+            <button class="internship-modal-close" onclick="document.getElementById('leetcodeModal').classList.remove('active')">
+              <i class="fas fa-times"></i>
+            </button>
+
+            <!-- Modal Header -->
+            <div class="internship-modal-header">
+              <div class="internship-modal-badge" style="background: rgba(255, 161, 22, 0.1); color: #ffa116; border-color: rgba(255, 161, 22, 0.2);">
+                <i class="fab fa-hackerrank"></i> LeetCode Profile
+              </div>
+              <h1>DSA Analytics Dashboard</h1>
+              <p class="internship-modal-subtitle">najishakhtarCoder123</p>
+            </div>
+
+            <!-- Dashboard Grid -->
+            <div class="lc-dashboard-grid">
+              <!-- Chart Section -->
+              <div class="lc-chart-card">
+                <h3>Interactive Activity Rings</h3>
+                <div class="lc-chart-container">
+                  <svg class="lc-donut-chart" viewBox="0 0 120 120">
+                    <!-- Easy Ring Background & Fill -->
+                    <circle cx="60" cy="60" r="45" class="lc-chart-bg" />
+                    <circle cx="60" cy="60" r="45" class="lc-chart-fill easy" id="chartEasyRing" stroke-dasharray="282.74" stroke-dashoffset="282.74" />
+                    
+                    <!-- Medium Ring Background & Fill -->
+                    <circle cx="60" cy="60" r="33" class="lc-chart-bg" />
+                    <circle cx="60" cy="60" r="33" class="lc-chart-fill medium" id="chartMediumRing" stroke-dasharray="207.35" stroke-dashoffset="207.35" />
+                    
+                    <!-- Hard Ring Background & Fill -->
+                    <circle cx="60" cy="60" r="21" class="lc-chart-bg" />
+                    <circle cx="60" cy="60" r="21" class="lc-chart-fill hard" id="chartHardRing" stroke-dasharray="131.95" stroke-dashoffset="131.95" />
+                  </svg>
+                  <div class="lc-chart-center-text">
+                    <span id="modalLcTotal">500+</span>
+                    <small>Solved</small>
+                  </div>
+                </div>
+                <!-- Chart Legend -->
+                <div class="lc-chart-legend">
+                  <div class="legend-item easy">
+                    <span class="legend-dot"></span>
+                    <span>Easy</span>
+                  </div>
+                  <div class="legend-item medium">
+                    <span class="legend-dot"></span>
+                    <span>Medium</span>
+                  </div>
+                  <div class="legend-item hard">
+                    <span class="legend-dot"></span>
+                    <span>Hard</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Stats Overview Cards -->
+              <div class="lc-stats-details">
+                <!-- Live Stats List -->
+                <div class="lc-detail-card">
+                  <div class="lc-stat-row">
+                    <span class="stat-icon"><i class="fas fa-trophy" style="color: #ffa116;"></i></span>
+                    <div class="stat-info">
+                      <span class="label">Global Ranking</span>
+                      <span class="value" id="modalLcRanking">Loading...</span>
+                    </div>
+                  </div>
+                  <div class="lc-stat-row">
+                    <span class="stat-icon"><i class="fas fa-percentage" style="color: #10b981;"></i></span>
+                    <div class="stat-info">
+                      <span class="label">Acceptance Rate</span>
+                      <span class="value" id="modalLcAcceptance">Loading...</span>
+                    </div>
+                  </div>
+                  <div class="lc-stat-row">
+                    <span class="stat-icon"><i class="fas fa-fire" style="color: #ef4444;"></i></span>
+                    <div class="stat-info">
+                      <span class="label">Contribution Points</span>
+                      <span class="value" id="modalLcContributions">Loading...</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Difficulty Progress Details -->
+                <div class="lc-progress-details">
+                  <div class="lc-diff-progress-item">
+                    <div class="lc-diff-header">
+                      <span class="diff-title easy">Easy</span>
+                      <span class="diff-count"><strong id="modalLcEasy">0</strong>/<span id="modalLcTotalEasy">0</span></span>
+                    </div>
+                    <div class="lc-progress-bar-wrapper">
+                      <div class="lc-progress-bar-fill easy" id="modalLcEasyBar" style="width: 0%"></div>
+                    </div>
+                  </div>
+                  <div class="lc-diff-progress-item">
+                    <div class="lc-diff-header">
+                      <span class="diff-title medium">Medium</span>
+                      <span class="diff-count"><strong id="modalLcMedium">0</strong>/<span id="modalLcTotalMedium">0</span></span>
+                    </div>
+                    <div class="lc-progress-bar-wrapper">
+                      <div class="lc-progress-bar-fill medium" id="modalLcMediumBar" style="width: 0%"></div>
+                    </div>
+                  </div>
+                  <div class="lc-diff-progress-item">
+                    <div class="lc-diff-header">
+                      <span class="diff-title hard">Hard</span>
+                      <span class="diff-count"><strong id="modalLcHard">0</strong>/<span id="modalLcTotalHard">0</span></span>
+                    </div>
+                    <div class="lc-progress-bar-wrapper">
+                      <div class="lc-progress-bar-fill hard" id="modalLcHardBar" style="width: 0%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Footer -->
+            <div class="internship-modal-section internship-summary-box" style="margin-top: 1.5rem; text-align: center;">
+              <p style="justify-content: center; font-style: normal; font-weight: 500;">
+                <i class="fas fa-external-link-alt" style="color: #ffa116;"></i>
+                Explore my complete profile, coding contests, and badges on the official LeetCode platform.
+              </p>
+              <a href="https://leetcode.com/u/najishakhtarCoder123/" target="_blank" class="btn btn-primary" style="margin-top: 1rem; border-radius: 30px; padding: 0.6rem 1.8rem; font-size: 0.85rem; background: linear-gradient(135deg, #ffa116, #f78c1e);">
+                <i class="fab fa-hackerrank"></i> Visit LeetCode Profile
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. B-Tech -->
+        <div class="timeline-item left reveal">
+          <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
+          <div class="card timeline-card">
+            <span class="timeline-badge edu">Education</span>
+            <span class="timeline-date">Oct 2022 - Nov 2026</span>
+            <h1>Bachelor of Technology</h1>
+            <p style="font-weight: 600; font-size: 0.9rem; margin-top: 0.2rem; color: var(--accent-1);">Computer Science and Engineering</p>
+            <h2 style="font-size: 13px; margin-top: 0.2rem;">Gurukula Kangdi (Deemed to be) University, Haridwar</h2>
+            <p style="font-size: 10px; font-weight: 600; margin-top: 0.3rem;">CGPA: 8.5</p>
+            <p style="font-size: 0.85rem; margin-top: 0.8rem;">
+              Gained a strong foundation in Computer Science, actively learning Full Stack Web Development, Data Structures & Algorithms, and backend technologies.
+            </p>
+            <a href="https://drive.google.com/file/d/YOUR_BTECH_MARKSHEET_ID/view" class="btn btn-primary"
+              style="display: inline-flex; margin-top: 0.8rem; gap: 0.5rem; width: auto; padding: 0.6rem 1.2rem; font-size: 0.85rem; border-radius: 30px;"
+              target="_blank">
+              <i class="fas fa-download"></i> Download Marksheet
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. 12th -->
+        <div class="timeline-item right reveal">
+          <div class="timeline-dot"><i class="fas fa-school"></i></div>
+          <div class="card timeline-card">
+            <span class="timeline-badge edu">Education</span>
+            <span class="timeline-date">Mar 2020 - Apr 2021</span>
+            <h1>Higher Secondary (12th) [PCM]</h1>
+            <h2 style="font-size: 13px; margin-top: 0.2rem;">Shri Narayan Singh College, Motihari</h2>
+            <p style="font-size: 10px; font-weight: 600; margin-top: 0.3rem;">Percentage: 80.6%</p>
+            <p style="font-size: 0.85rem; margin-top: 0.8rem;">
+              Completed higher secondary education with a focus on Mathematics and Computer Science, building logical thinking and problem-solving skills.
+            </p>
+            <a href="https://drive.google.com/file/d/1PkXlhVvT3CGD6ykbTaJaDFCtPZsODF_P/view?usp=drivesdk"
+              class="btn btn-primary"
+              style="display: inline-flex; margin-top: 0.8rem; gap: 0.5rem; width: auto; padding: 0.6rem 1.2rem; font-size: 0.85rem; border-radius: 30px;"
+              target="_blank">
+              <i class="fas fa-download"></i> Download Marksheet
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. 10th -->
+        <div class="timeline-item left reveal">
+          <div class="timeline-dot"><i class="fas fa-school"></i></div>
+          <div class="card timeline-card">
+            <span class="timeline-badge edu">Education</span>
+            <span class="timeline-date">Mar 2018 - Apr 2019</span>
+            <h1>Secondary School (10th)</h1>
+            <h2 style="font-size: 13px; margin-top: 0.2rem;">+2 Zila School, Motihari</h2>
+            <p style="font-size: 10px; font-weight: 600; margin-top: 0.3rem;">Percentage: 78.6%</p>
+            <p style="font-size: 0.85rem; margin-top: 0.8rem;">
+              Completed secondary school education with strong marks, focusing on foundational science, math, and logical problem-solving.
+            </p>
+            <a href="https://drive.google.com/file/d/1I-GtJZco8h8pPes8dq5dBCgmOnUX53Ho/view?usp=drive_link"
+              class="btn btn-primary"
+              style="display: inline-flex; margin-top: 0.8rem; gap: 0.5rem; width: auto; padding: 0.6rem 1.2rem; font-size: 0.85rem; border-radius: 30px;"
+              target="_blank">
+              <i class="fas fa-download"></i> Download Marksheet
+            </a>
+          </div>
         </div>
       </div>
-
     </div>
   </section>
-
-  </div>
-  </section>
-  <script>
-    document.querySelector('a[href="#educations"]').addEventListener("click", function (e) {
-      e.preventDefault();
-      document.getElementById("educations").scrollIntoView({
-        behavior: "smooth"
-      });
-    });
-  </script>
-
-  <!-- Experience Section -->
-  <section id="experience" class="section" style="background:rgba(10, 14, 39, 0.4); padding:20px;">
-    <div class="container">
-      <h2 class="section-title">Experience & Internship</h2>
-      <div class="experience-grid">
-        <div class="card">
-          <h1>Software Developer Intern</h1>
-          <p style="color: aliceblue;"> Jan-2026 - Present</p>
-          <h2 style="font-size: 14px;">Tecxed (Onsite)</h2>
-          <p>
-            During my internship at Tecxed, I developed and maintained robust software solutions utilizing modern web
-            technologies and best practices. I contributed to building scalable, responsive applications by implementing
-            frontend interfaces and optimizing backend systems. Collaborated with senior developers on full-stack
-            projects, gaining hands-on experience with various frameworks and databases. Enhanced my problem-solving
-            skills and understanding of professional software architecture through real-world projects. This experience
-            solidified my foundation in professional development environments and agile methodologies.
-          </p>
-        </div>
-        <div class="card">
-          <h1>MERN Stack Developer Intern</h1>
-          <p style="color: aliceblue;">20-jan 2026 - 20-March 2026</p>
-          <h2 style="font-size: 14px;"> The Skybrisk(Remote)</h2>
-          <p>
-            During my internship at Skybrisk, I worked on two major projects: Book Management System and ERP Management
-            System. The Book Management System was designed to organize, store, and manage book records efficiently,
-            including issuing, returning, and availability tracking. The ERP Management System focused on integrating
-            multiple business operations such as user management, data handling, and workflow coordination into a single
-            platform. Through these projects, I gained hands-on experience in backend development, database design, and
-            real-world problem solving.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <script>
-    document.getElementById("experience").addEventListener("click", function (e) {
-      e.preventDefault();
-      document.getElementById("experience").scrollIntoView({
-        behavior: "smooth"
-      });
-    });
-  </script>
 
   <!-- Skills Section -->
   <section id="skills" class="section">
@@ -317,6 +714,43 @@
             <span class="skill-tag">VS Code</span>
             <span class="skill-tag">Postman</span>
             <span class="skill-tag">Bootstrap</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DSA Visualizer / Sandbox Section -->
+  <section id="dsa-visualizer" class="section">
+    <div class="container">
+      <h2 class="section-title">🧩 Mini DSA Sandbox</h2>
+      <p style="text-align: center; color: var(--text-secondary); max-width: 600px; margin: -1.5rem auto 2.5rem auto; font-size: 0.95rem;">
+        Explore sorting, search, and pathfinding algorithms visually. Select an algorithm below, customize the inputs, and watch the execution step-by-step.
+      </p>
+
+      <div class="dsa-visualizer-card">
+        <!-- Visualizer Tabs -->
+        <div class="dsa-tabs">
+          <button class="dsa-tab-btn active" id="dsaTabSorting" onclick="switchDsaTab('sorting')"><i class="fas fa-sort-amount-up-alt"></i> Sorting Visualizer</button>
+          <button class="dsa-tab-btn" id="dsaTabSearch" onclick="switchDsaTab('search')"><i class="fas fa-search"></i> Binary Search</button>
+          <button class="dsa-tab-btn" id="dsaTabBfs" onclick="switchDsaTab('bfs')"><i class="fas fa-network-wired"></i> BFS Pathfinding</button>
+        </div>
+
+        <!-- Sandbox Panel -->
+        <div class="dsa-panel-content">
+          <!-- Controls -->
+          <div class="dsa-controls" id="dsaControls">
+            <!-- Dynamic Controls based on tab -->
+          </div>
+
+          <!-- Canvas / Playground Area -->
+          <div class="dsa-sandbox-screen" id="dsaSandboxScreen">
+            <!-- Dynamic Canvas based on tab -->
+          </div>
+
+          <!-- Explanation Panel -->
+          <div class="dsa-status-console" id="dsaStatusConsole">
+            <strong>Console:</strong> Ready. Click "Start Visualization" to begin.
           </div>
         </div>
       </div>
@@ -457,6 +891,21 @@
   <section id="projects" class="section">
     <div class="container">
       <h2 class="section-title">Featured Projects</h2>
+
+      <!-- Project Controls: Search & Filters -->
+      <div class="project-controls">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="projectSearch" placeholder="Search by title or tech (e.g. React, MongoDB)..." />
+        </div>
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+          <button class="filter-btn" data-filter="frontend">Frontend</button>
+          <button class="filter-btn" data-filter="utility">Utility / Games</button>
+        </div>
+      </div>
+
       <div id="projectsContainer" class="projects-grid">
         <!-- Projects will be dynamically loaded from script.js -->
       </div>
@@ -518,45 +967,78 @@
               <div class="language-name">JavaScript</div>
               <div class="language-bar">
                 <div class="language-progress"
-                  style="width: 35%; background: linear-gradient(90deg, #f1e05a, #ffcc00);"></div>
+                  style="width: 30%; background: linear-gradient(90deg, #f1e05a, #ffcc00);"></div>
               </div>
-              <div class="language-percent">35%</div>
+              <div class="language-percent">30%</div>
+            </div>
+
+            <div class="language-card">
+              <div class="language-name">Java</div>
+              <div class="language-bar">
+                <div class="language-progress"
+                  style="width: 20%; background: linear-gradient(90deg, #b07219, #f89820);"></div>
+              </div>
+              <div class="language-percent">20%</div>
+            </div>
+
+            <div class="language-card">
+              <div class="language-name">Spring Boot</div>
+              <div class="language-bar">
+                <div class="language-progress"
+                  style="width: 15%; background: linear-gradient(90deg, #6db33f, #3f921d);"></div>
+              </div>
+              <div class="language-percent">15%</div>
             </div>
 
             <div class="language-card">
               <div class="language-name">React.js</div>
               <div class="language-bar">
                 <div class="language-progress"
-                  style="width: 25%; background: linear-gradient(90deg, #61dafb, #00d4ff);"></div>
+                  style="width: 15%; background: linear-gradient(90deg, #61dafb, #00d4ff);"></div>
               </div>
-              <div class="language-percent">25%</div>
+              <div class="language-percent">15%</div>
             </div>
 
             <div class="language-card">
               <div class="language-name">Node.js</div>
               <div class="language-bar">
                 <div class="language-progress"
-                  style="width: 20%; background: linear-gradient(90deg, #68a063, #90c53f);"></div>
+                  style="width: 10%; background: linear-gradient(90deg, #68a063, #90c53f);"></div>
               </div>
-              <div class="language-percent">20%</div>
+              <div class="language-percent">10%</div>
             </div>
 
             <div class="language-card">
               <div class="language-name">MongoDB</div>
               <div class="language-bar">
                 <div class="language-progress"
-                  style="width: 15%; background: linear-gradient(90deg, #13aa52, #00ed64);"></div>
+                  style="width: 8%; background: linear-gradient(90deg, #13aa52, #00ed64);"></div>
               </div>
-              <div class="language-percent">15%</div>
+              <div class="language-percent">8%</div>
             </div>
 
             <div class="language-card">
               <div class="language-name">CSS/HTML</div>
               <div class="language-bar">
-                <div class="language-progress" style="width: 5%; background: linear-gradient(90deg, #563d7c, #ff006e);">
+                <div class="language-progress" style="width: 2%; background: linear-gradient(90deg, #563d7c, #ff006e);">
                 </div>
               </div>
-              <div class="language-percent">5%</div>
+              <div class="language-percent">2%</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Featured Repositories -->
+        <div class="github-repos-section" style="margin-top: 3rem;">
+          <h3 style="text-align: center; color: var(--accent-1); margin-bottom: 2rem;">
+            <i class="fas fa-folder-open"></i> Featured GitHub Repositories
+          </h3>
+          <div id="githubReposGrid" class="github-repos-grid">
+            <div class="repo-loading"
+              style="grid-column: 1/-1; text-align: center; color: var(--text-secondary); padding: 2rem;">
+              <i class="fas fa-spinner fa-spin"
+                style="font-size: 2rem; margin-bottom: 1rem; color: var(--accent-1);"></i>
+              <p>Fetching repositories from GitHub...</p>
             </div>
           </div>
         </div>
@@ -566,6 +1048,228 @@
           <a href="https://github.com/najishakhtar2378" target="_blank" class="btn btn-primary">
             <i class="fab fa-github"></i> View GitHub Profile
           </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blogs" class="section">
+    <div class="container">
+      <h2 class="section-title">Blog & Articles</h2>
+      <p style="text-align:center; color: var(--text-secondary); margin-bottom: 2.5rem; font-size: 1.05rem;">
+        Thoughts on DSA, Web Development, and the Developer Journey
+      </p>
+
+      <div class="blog-grid">
+
+        <!-- Blog 1 -->
+        <article class="blog-card">
+          <div class="blog-tag">DSA</div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span><i class="far fa-calendar-alt"></i> Jun 2025</span>
+              <span><i class="far fa-clock"></i> 5 min read</span>
+            </div>
+            <h3 class="blog-title">Mastering Two-Pointer Technique in Array Problems</h3>
+            <p class="blog-excerpt">A deep-dive into one of the most powerful DSA patterns — how two-pointer reduces O(n²) problems to O(n) with elegant simplicity.</p>
+          </div>
+          <div class="blog-footer">
+            <span class="blog-author"><i class="fas fa-user-circle"></i> Najish Akhtar</span>
+            <button class="blog-read-btn" data-blog-id="0">Read More <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <!-- Blog 2 -->
+        <article class="blog-card">
+          <div class="blog-tag react">React</div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span><i class="far fa-calendar-alt"></i> May 2025</span>
+              <span><i class="far fa-clock"></i> 7 min read</span>
+            </div>
+            <h3 class="blog-title">React useEffect — Common Mistakes Every Beginner Makes</h3>
+            <p class="blog-excerpt">Infinite loops, stale closures, and dependency arrays — understanding why useEffect behaves the way it does and how to fix it.</p>
+          </div>
+          <div class="blog-footer">
+            <span class="blog-author"><i class="fas fa-user-circle"></i> Najish Akhtar</span>
+            <button class="blog-read-btn" data-blog-id="1">Read More <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <!-- Blog 3 -->
+        <article class="blog-card">
+          <div class="blog-tag node">Node.js</div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span><i class="far fa-calendar-alt"></i> Apr 2025</span>
+              <span><i class="far fa-clock"></i> 6 min read</span>
+            </div>
+            <h3 class="blog-title">Building REST APIs with Express.js — Best Practices</h3>
+            <p class="blog-excerpt">From folder structure to error handling middleware — a production-ready approach to Express.js API development for beginners and intermediates.</p>
+          </div>
+          <div class="blog-footer">
+            <span class="blog-author"><i class="fas fa-user-circle"></i> Najish Akhtar</span>
+            <button class="blog-read-btn" data-blog-id="2">Read More <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <!-- Blog 4 -->
+        <article class="blog-card">
+          <div class="blog-tag db">MongoDB</div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span><i class="far fa-calendar-alt"></i> Mar 2025</span>
+              <span><i class="far fa-clock"></i> 4 min read</span>
+            </div>
+            <h3 class="blog-title">MongoDB Aggregation Pipeline — Power You're Not Using</h3>
+            <p class="blog-excerpt">Skip the JavaScript loops. MongoDB's aggregation pipeline can process, group, sort, and reshape data server-side with stunning efficiency.</p>
+          </div>
+          <div class="blog-footer">
+            <span class="blog-author"><i class="fas fa-user-circle"></i> Najish Akhtar</span>
+            <button class="blog-read-btn" data-blog-id="3">Read More <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <!-- Blog 5 -->
+        <article class="blog-card">
+          <div class="blog-tag java">Java</div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span><i class="far fa-calendar-alt"></i> Feb 2025</span>
+              <span><i class="far fa-clock"></i> 8 min read</span>
+            </div>
+            <h3 class="blog-title">OOPs in Java — From Textbook to Real World Applications</h3>
+            <p class="blog-excerpt">Inheritance, polymorphism and encapsulation explained with real MERN project examples — not just animal-and-dog analogies.</p>
+          </div>
+          <div class="blog-footer">
+            <span class="blog-author"><i class="fas fa-user-circle"></i> Najish Akhtar</span>
+            <button class="blog-read-btn" data-blog-id="4">Read More <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <!-- Blog 6 -->
+        <article class="blog-card featured">
+          <div class="blog-tag career">Career</div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span><i class="far fa-calendar-alt"></i> Jan 2025</span>
+              <span><i class="far fa-clock"></i> 10 min read</span>
+            </div>
+            <h3 class="blog-title">My Internship Journey — What I Learned in 3 Months at a Startup</h3>
+            <p class="blog-excerpt">From setting up development environments to pushing production code — an honest account of what real internship experience looks and feels like.</p>
+          </div>
+          <div class="blog-footer">
+            <span class="blog-author"><i class="fas fa-user-circle"></i> Najish Akhtar</span>
+            <button class="blog-read-btn" data-blog-id="5">Read More <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Article Modal -->
+  <div id="blogModal" class="blog-modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="blog-modal-container">
+      <div class="blog-modal-header">
+        <button class="blog-modal-close" id="blogModalClose" aria-label="Close"><i class="fas fa-times"></i></button>
+        <div class="blog-modal-tag-wrap" id="blogModalTag"></div>
+      </div>
+      <div class="blog-modal-body" id="blogModalBody">
+        <!-- Content injected by JS -->
+      </div>
+      <div class="blog-modal-footer">
+        <span class="blog-modal-author"><i class="fas fa-user-circle"></i> Najish Akhtar</span>
+        <button class="blog-modal-back" id="blogModalBack"><i class="fas fa-arrow-left"></i> Back to Blogs</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Guestbook Section -->
+  <section id="guestbook" class="section">
+    <div class="container">
+      <h2 class="section-title">Visitor Guestbook</h2>
+      <p class="section-subtitle" style="text-align: center; max-width: 600px; margin: -1.5rem auto 3rem auto; color: var(--text-secondary);">
+        Leave a note, share your thoughts, or just say hello! Your message will be saved in real-time.
+      </p>
+
+      <div class="guestbook-grid">
+        <!-- Message Form -->
+        <div class="guestbook-card guestbook-form-wrap">
+          <h3><i class="fas fa-pen-nib"></i> Write a Message</h3>
+          <form id="guestbookForm">
+            <div class="form-group" style="margin-bottom: 1.2rem;">
+              <label for="gbName" style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">Your Name</label>
+              <input type="text" id="gbName" placeholder="e.g. John Doe" required autocomplete="off" 
+                style="width: 100%; padding: 0.8rem 1rem; border-radius: 10px; border: 1px solid var(--border-color); background: var(--bg-secondary); color: var(--text-primary); outline: none; transition: border-color 0.3s ease;" />
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1.2rem;">
+              <label for="gbRole" style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">Designation / Role</label>
+              <select id="gbRole" 
+                style="width: 100%; padding: 0.8rem 1rem; border-radius: 10px; border: 1px solid var(--border-color); background: var(--bg-secondary); color: var(--text-primary); outline: none; cursor: pointer; transition: border-color 0.3s ease;">
+                <option value="Visitor">Visitor</option>
+                <option value="Recruiter">Recruiter / HR</option>
+                <option value="Developer">Software Engineer</option>
+                <option value="Project Manager">Project Manager</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1.2rem;">
+              <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">Select Avatar</label>
+              <div class="gb-avatar-selector" style="display: flex; gap: 0.8rem;">
+                <label class="avatar-option active">
+                  <input type="radio" name="gbAvatar" value="laptop-code" checked style="display: none;" />
+                  <span class="avatar-icon"><i class="fas fa-laptop-code"></i></span>
+                </label>
+                <label class="avatar-option">
+                  <input type="radio" name="gbAvatar" value="rocket" style="display: none;" />
+                  <span class="avatar-icon"><i class="fas fa-rocket"></i></span>
+                </label>
+                <label class="avatar-option">
+                  <input type="radio" name="gbAvatar" value="coffee" style="display: none;" />
+                  <span class="avatar-icon"><i class="fas fa-coffee"></i></span>
+                </label>
+                <label class="avatar-option">
+                  <input type="radio" name="gbAvatar" value="user-astronaut" style="display: none;" />
+                  <span class="avatar-icon"><i class="fas fa-user-astronaut"></i></span>
+                </label>
+                <label class="avatar-option">
+                  <input type="radio" name="gbAvatar" value="smile" style="display: none;" />
+                  <span class="avatar-icon"><i class="fas fa-smile"></i></span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1.5rem;">
+              <label for="gbMessage" style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">Message</label>
+              <textarea id="gbMessage" rows="4" placeholder="Type your message here..." required
+                style="width: 100%; padding: 0.8rem 1rem; border-radius: 10px; border: 1px solid var(--border-color); background: var(--bg-secondary); color: var(--text-primary); outline: none; resize: vertical; min-height: 80px; transition: border-color 0.3s ease;"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 12px; justify-content: center; gap: 0.6rem; padding: 0.8rem;">
+              <i class="fas fa-paper-plane"></i> Post Message
+            </button>
+          </form>
+        </div>
+
+        <!-- Feed List -->
+        <div class="guestbook-feed-wrap">
+          <div class="feed-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+            <h3 style="font-size: 1.2rem; font-weight: 700;"><i class="fas fa-comments" style="color: var(--accent-1); margin-right: 0.5rem;"></i> Live Messages</h3>
+            <div style="display: flex; gap: 0.8rem; align-items: center;">
+              <span class="messages-count" id="messagesCount" style="font-size: 0.8rem; background: rgba(59, 130, 246, 0.1); color: var(--accent-1); padding: 0.25rem 0.75rem; border-radius: 20px; font-weight: 600;">0 messages</span>
+              <button id="gbClearAllBtn" title="Clear all messages" style="background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2); color: #ef4444; padding: 0.3rem 0.7rem; border-radius: 8px; font-size: 0.75rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.3rem; transition: all 0.3s ease; outline: none;">
+                <i class="fas fa-trash-alt"></i> Clear
+              </button>
+            </div>
+          </div>
+          <div class="guestbook-feed" id="guestbookFeed">
+            <!-- Dynamic items loaded by JS -->
+          </div>
         </div>
       </div>
     </div>
@@ -587,21 +1291,24 @@
             <div class="contact-method">
               <i class="fas fa-envelope"></i>
               <div>
-                <h4>Email ( Most Recommended)</h4>
+                <h4>Email ( Most Recommended) <span style="color: red; font-size:10px;"> (Will Reply Within 24
+                    Hours)</span></h4>
                 <a href="mailto:najishchamparni2003@gmail.com">najishchamparni2003@gmail.com</a>
               </div>
             </div>
             <div class="contact-method">
               <i class="fab fa-linkedin"></i>
               <div>
-                <h4>LinkedIn</h4>
+                <h4>LinkedIn <span style="color: red; font-size:10px;"> (Will Reply Within 24
+                    Hours)</span></h4>
                 <a href="https://linkedin.com/in/najish-akhtar-698b30263" target="_blank">Connect with me</a>
               </div>
             </div>
             <div class="contact-method">
               <i class="fab fa-github"></i>
               <div>
-                <h4>GitHub</h4>
+                <h4>GitHub <span style="color: red; font-size:10px;"> (Will Reply Within 24
+                    Hours)</span></h4>
                 <a href="https://github.com/najishakhtar2378" target="_blank">Follow my work</a>
               </div>
             </div>
@@ -690,6 +1397,75 @@
           });
       });
   </script>
+  <!-- Reusable Glassmorphism Modal System (Overlay and Container) -->
+  <div id="customModal" class="custom-modal">
+    <div class="custom-modal-overlay" onclick="window.closeCustomModal()"></div>
+    <div class="custom-modal-container">
+      <button class="custom-modal-close" onclick="window.closeCustomModal()">&times;</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- Floating Theme Customizer Panel -->
+  <div class="theme-customizer" id="themeCustomizer">
+    <button class="theme-customizer-toggle" id="customizerToggle" title="Theme Settings">
+      <i class="fas fa-cog"></i>
+    </button>
+    <div class="theme-customizer-panel" id="customizerPanel">
+      <h3>Theme Customizer</h3>
+      
+      <div class="customizer-section">
+        <h4>Accent Color</h4>
+        <div class="accent-options">
+          <button class="accent-dot active" data-accent="blue" style="background: #3b82f6;" title="Classic Blue"></button>
+          <button class="accent-dot" data-accent="green" style="background: #10b981;" title="Emerald Green"></button>
+          <button class="accent-dot" data-accent="purple" style="background: #8b5cf6;" title="Electric Purple"></button>
+          <button class="accent-dot" data-accent="rose" style="background: #f43f5e;" title="Vibrant Rose"></button>
+          <button class="accent-dot" data-accent="amber" style="background: #f59e0b;" title="Sunset Amber"></button>
+        </div>
+      </div>
+
+      <div class="customizer-section dark-only-options" id="darkBgSection">
+        <h4>Dark Background</h4>
+        <div class="bg-options">
+          <button class="bg-option active" data-bg="midnight">Midnight</button>
+          <button class="bg-option" data-bg="obsidian">Obsidian</button>
+          <button class="bg-option" data-bg="cyberpunk">Cyberpunk</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Developer CLI Console -->
+  <div id="devConsole" class="dev-console minimized">
+    <div class="dev-console-header" id="consoleHeader">
+      <div class="dev-console-dots">
+        <span class="dot dot-red" id="consoleClose" title="Close"></span>
+        <span class="dot dot-yellow" id="consoleMinimize" title="Minimize"></span>
+        <span class="dot dot-green" id="consoleMaximize" title="Maximize"></span>
+      </div>
+      <span class="dev-console-title">
+        <i class="fas fa-terminal"></i>&nbsp; najish@portfolio:~$
+      </span>
+      <button class="console-toggle-btn" id="consoleToggle" title="Open Terminal">
+        <i class="fas fa-chevron-up"></i>
+      </button>
+    </div>
+    <div class="dev-console-body" id="consoleBody">
+      <div class="console-output" id="consoleOutput">
+        <div class="console-line system">
+          <span class="console-prompt">portfolio</span>
+          <span class="console-text"> v1.0.0 — Developer Terminal 🚀</span>
+        </div>
+        <div class="console-line system">
+          <span class="console-text muted">Type <strong>help</strong> to see all available commands.</span>
+        </div>
+      </div>
+      <div class="console-input-line">
+        <span class="console-prompt-symbol">❯</span>
+        <input type="text" id="consoleInput" class="console-input" placeholder="type a command..." autocomplete="off" spellcheck="false" />
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
