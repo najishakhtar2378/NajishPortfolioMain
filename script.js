@@ -36,6 +36,25 @@ const projectsData = [
     challenges: "Designing clean API routers and securing endpoints based on user permissions while maintaining low response latency for complex data aggregation queries."
   },
   {
+  title: "Game Go - Multiplayer Archery Game",
+  description: "Developed a real-time multiplayer archery game using the MERN stack and Socket.IO. Implemented live player matchmaking, real-time gameplay synchronization, leaderboards, achievements, tournaments, and an in-game rewards system.",
+  technologies: ["JavaScript", "React.js", "Node.js", "MongoDB", "Express", "Socket.IO", "REST API", "JWT"],
+  githubLink: "https://github.com/najishakhtar2378/GamegoFrontend.git",
+  liveLink: "https://gamego-frontend.vercel.app/",
+  icon: "fas fa-gamepad",
+  status: "completed",
+  category: "fullstack",
+  features: [
+    "Real-time multiplayer gameplay using Socket.IO",
+    "Player authentication and profile management with JWT",
+    "Global leaderboard and ranking system",
+    "Achievements, daily quests, and rewards system",
+    "Tournament mode with AI and multiplayer competitions",
+    "In-game shop for themes, trails, and visual customizations"
+  ],
+  challenges: "Implementing real-time game state synchronization between players using Socket.IO while maintaining smooth gameplay, low latency, and consistent scoring across different client devices."
+},
+  {
     title: "Video Conferencing App (Zoom Clone)",
     description: "A real-time app with a React frontend and Node.js + Express backend. Built a full-stack real-time video conferencing web app using WebRTC, React, and Socket.io.",
     technologies: ["React.js", "Node.js", "Express.js", "API", "socket.io", "webRTC", "mongoDB"],
